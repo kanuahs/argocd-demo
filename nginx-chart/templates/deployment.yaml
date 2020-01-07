@@ -20,3 +20,11 @@ spec:
         image: "{{ .Values.nginx.image }}:{{ .Values.nginx.tag }}"
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: nginx-configmap
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
+      volumes:
+        - name: nginx-configmap
+          configMap:
+            name: nginx-configmap
