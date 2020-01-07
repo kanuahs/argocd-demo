@@ -16,6 +16,10 @@ spec:
     chart: prometheus
     repoURL: https://kubernetes-charts.storage.googleapis.com
     targetRevision: {{ .apps.prometheus.version }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
 {{- end }}
 ---
 {{- end }}

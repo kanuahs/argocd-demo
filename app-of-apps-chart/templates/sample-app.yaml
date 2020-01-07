@@ -16,6 +16,10 @@ spec:
     path: nginx-chart
     repoURL: 'https://github.com/kanuahs/argocd-demo.git'
     targetRevision: {{ .apps.sampleApp.branch }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
 {{- end }}
 ---
 
