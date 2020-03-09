@@ -9,12 +9,12 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: default
+    namespace: {{ .namespace }}
     server: {{ .destinationServer }}
-  project: default
+  project: {{ .project }}
   source:
     path: nginx-chart
-    repoURL: 'https://github.com/kanuahs/argocd-demo.git'
+    repoURL: 'https://github.com/jielingit/argocd-demo.git'
     targetRevision: {{ .apps.sampleApp.branch }}
   syncPolicy:
     automated:

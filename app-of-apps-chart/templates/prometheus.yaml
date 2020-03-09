@@ -9,9 +9,9 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: default
+    namespace: {{ .namespace }}
     server: {{ .destinationServer }}
-  project: default
+  project: {{ .project }}
   source:
     chart: prometheus
     repoURL: https://kubernetes-charts.storage.googleapis.com
