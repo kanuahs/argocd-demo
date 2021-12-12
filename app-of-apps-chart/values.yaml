@@ -7,7 +7,7 @@ clusters:
       version: "9.7.4"
       #valueFiles: aks-demo-setup-02/prometheus-values.yaml
 
-    sample-app:
+    sampleApp:
       enabled: true
       branch: HEAD
 
