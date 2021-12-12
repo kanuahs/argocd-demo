@@ -10,7 +10,7 @@ clusters:
       enabled: true
       branch: HEAD
 
-#- name: gke
+#- name: aks-demo-setup-01
 #  destinationServer: #INSERT MASTERIP HERE
 #  apps:
 #    prometheus:
