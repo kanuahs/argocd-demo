@@ -13,8 +13,8 @@ spec:
     server: {{ .destinationServer }}
   project: default
   source:
-    chart: prometheus
-    repoURL: https://prometheus-community.github.io/helm-charts
+    path: {{ .name }}/prometheus
+    repoURL: 'https://github.com/prajithparammal/argocd-demo.git'
     targetRevision: {{ .apps.prometheus.version }}
   syncPolicy:
     automated:
