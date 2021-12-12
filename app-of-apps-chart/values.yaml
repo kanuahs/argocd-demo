@@ -1,5 +1,5 @@
 clusters:
-- name: minikube
+- name: aks-demo-setup-02
   destinationServer: https://kubernetes.default.svc
   apps:
     prometheus:
