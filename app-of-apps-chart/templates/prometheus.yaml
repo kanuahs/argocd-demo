@@ -15,7 +15,6 @@ spec:
   source:
     path: {{ .name }}/prometheus
     repoURL: 'https://github.com/prajithparammal/argocd-demo.git'
-    targetRevision: {{ .apps.prometheus.version }}
   syncPolicy:
     automated:
       prune: true
