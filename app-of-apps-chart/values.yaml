@@ -4,6 +4,7 @@ clusters:
   apps:
     prometheus:
       enabled: true
+      branch: HEAD
       
     sampleApp:
       enabled: true
