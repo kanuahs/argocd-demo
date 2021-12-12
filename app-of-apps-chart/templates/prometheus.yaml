@@ -13,6 +13,11 @@ spec:
     server: {{ .destinationServer }}
   project: default
   source:
+{{- if .apps.prometheus.valueFiles }}
+    helm:
+      valueFiles:
+      - {{ .apps.prometheus.valueFiles }}
+{{- end }}
     chart: prometheus
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: {{ .apps.prometheus.version }}

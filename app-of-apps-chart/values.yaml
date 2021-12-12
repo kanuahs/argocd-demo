@@ -5,6 +5,7 @@ clusters:
     prometheus:
       enabled: true
       version: "9.7.4"
+      #valueFiles: aks-demo-setup-02/prometheus-values.yaml
 
     nginx:
       enabled: true
