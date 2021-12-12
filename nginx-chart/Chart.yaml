@@ -1,5 +1,0 @@
-apiVersion: v1
-description: Sample Nginx chart
-name: nginx-sample
-version: 0.0.1
-appVersion: 1.7.9
