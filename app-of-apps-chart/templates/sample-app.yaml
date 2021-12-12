@@ -13,7 +13,7 @@ spec:
     server: {{ .destinationServer }}
   project: default
   source:
-    path: ../../{{ .name }}/nginx-chart
+    path: ../{{ .name }}/nginx-chart
     repoURL: 'https://github.com/kanuahs/argocd-demo.git'
     targetRevision: {{ .apps.sampleApp.branch }}
   syncPolicy:
