@@ -1,0 +1,26 @@
+{{- range .Values.clusters }}
+{{- if .apps.sampleApp.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{printf "%s-%s" .name "nginx"}}
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    server: {{ .destinationServer }}
+  project: default
+  source:
+    path: nginx-chart
+    repoURL: 'https://github.com/kanuahs/argocd-demo.git'
+    targetRevision: {{ .apps.sampleApp.branch }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+{{- end }}
+---
+
+{{- end }}
