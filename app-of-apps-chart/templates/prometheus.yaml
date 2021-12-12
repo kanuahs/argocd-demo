@@ -14,7 +14,7 @@ spec:
   project: default
   source:
     chart: prometheus
-    repoURL: https://kubernetes-charts.storage.googleapis.com
+    repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: {{ .apps.prometheus.version }}
   syncPolicy:
     automated:
