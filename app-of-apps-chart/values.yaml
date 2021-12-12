@@ -1,21 +1,20 @@
 clusters:
-- name: aks-demo-setup-02
-  destinationServer: https://kubernetes.default.svc
-  apps:
-    prometheus:
-      enabled: true
-      branch: HEAD
-      
-    sampleApp:
-      enabled: true
-      branch: HEAD
+  - name: aks-demo-setup-02
+    destinationServer: https://kubernetes.default.svc
+    apps:
+      prometheus:
+        enabled: true
+        branch: HEAD
 
+      nginx:
+        enabled: true
+        branch: HEAD
 #- name: aks-demo-setup-01
 #  destinationServer: #INSERT MASTERIP HERE
 #  apps:
 #    prometheus:
 #      enabled: true
 #      version: "9.7.4"
-#    sampleApp:
+#    nginx:
 #      enabled: true
 #      branch: HEAD
