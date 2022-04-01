@@ -13,9 +13,9 @@ spec:
     server: {{ .destinationServer }}
   project: default
   source:
-    chart: prometheus
-    repoURL: https://kubernetes-charts.storage.googleapis.com
-    targetRevision: {{ .apps.prometheus.version }}
+    path: {{ .name }}/prometheus
+    repoURL: 'https://github.com/prajithparammal/argocd-demo.git'
+    targetRevision: {{ .apps.prometheus.branch }}
   syncPolicy:
     automated:
       prune: true
